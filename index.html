@@ -254,6 +254,54 @@
             color: var(--action);
         }
 
+        /* App Screenshots */
+        .screenshots {
+            padding: 2rem 0 3rem;
+            text-align: center;
+        }
+
+        .screenshots h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 2rem;
+            letter-spacing: -0.01em;
+        }
+
+        .screenshots-scroll {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            padding: 0 1.5rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .screenshots-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .screenshot-item {
+            flex-shrink: 0;
+            scroll-snap-align: center;
+            text-align: center;
+        }
+
+        .screenshot-item img {
+            width: 220px;
+            border-radius: 24px;
+            box-shadow: 0 8px 30px rgba(30, 10, 60, 0.12);
+        }
+
+        .screenshot-item p {
+            margin-top: 0.75rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
         /* Content Sections */
         .content-section {
             max-width: 700px;
@@ -385,6 +433,15 @@
 
             .features {
                 grid-template-columns: 1fr;
+            }
+
+            .screenshots-scroll {
+                justify-content: flex-start;
+            }
+
+            .screenshot-item img {
+                width: 190px;
+                border-radius: 20px;
             }
         }
     </style>
@@ -534,6 +591,24 @@
             </div>
         </div>
     </main>
+
+    <section class="screenshots">
+        <h2>Bekijk de app</h2>
+        <div class="screenshots-scroll">
+            <div class="screenshot-item">
+                <img src="images/app-screenshots/Ontdekken.png" alt="Bazaarzoeker app - ontdek rommelmarkten in je buurt" loading="lazy">
+                <p>Ontdekken</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/app-screenshots/Event Details.png" alt="Bazaarzoeker app - details van een rommelmarkt met datum, locatie en type" loading="lazy">
+                <p>Details</p>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/app-screenshots/Filter.png" alt="Bazaarzoeker app - filter op datum en type rommelmarkt" loading="lazy">
+                <p>Filteren</p>
+            </div>
+        </div>
+    </section>
 
     <section class="content-section">
         <h2>Rommelmarkten vinden in Vlaanderen</h2>
