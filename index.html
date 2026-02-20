@@ -15,6 +15,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
     <link rel="manifest" href="images/favicon/site.webmanifest">
     <link rel="canonical" href="https://bazaarzoeker.be/">
+    <link rel="alternate" hreflang="nl-BE" href="https://bazaarzoeker.be/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Bazaarzoeker - Vind rommelmarkten in Vlaanderen">
@@ -253,6 +254,110 @@
             color: var(--action);
         }
 
+        /* Content Sections */
+        .content-section {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        .content-section h2 {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.01em;
+        }
+
+        .content-section p {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* How it works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 1.25rem 1rem;
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: var(--white);
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .step h3 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--secondary);
+            margin-bottom: 0.35rem;
+        }
+
+        .step p {
+            font-size: 0.85rem;
+        }
+
+        /* FAQ */
+        .faq-list {
+            margin-top: 1.5rem;
+        }
+
+        .faq-list details {
+            border-bottom: 1px solid rgba(30, 10, 60, 0.08);
+        }
+
+        .faq-list summary {
+            padding: 1rem 0;
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--secondary);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-list summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .faq-list summary::after {
+            content: '+';
+            font-size: 1.3rem;
+            color: var(--action);
+            font-weight: 400;
+            flex-shrink: 0;
+            margin-left: 1rem;
+        }
+
+        .faq-list details[open] summary::after {
+            content: '\2212';
+        }
+
+        .faq-list .faq-answer {
+            padding: 0 0 1rem 0;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
         /* Responsive */
         @media (max-width: 600px) {
             h1 {
@@ -311,6 +416,56 @@
             "@type": "Place",
             "name": "Vlaanderen, België"
         }
+    }
+    </script>
+
+    <!-- FAQ Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is Bazaarzoeker gratis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, Bazaarzoeker is volledig gratis te downloaden en te gebruiken. Je hebt geen account nodig om rommelmarkten te zoeken en te bekijken."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welke provincies worden ondersteund?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Bazaarzoeker dekt heel Vlaanderen: Antwerpen, Limburg, Oost-Vlaanderen, West-Vlaanderen en Vlaams-Brabant. Je vindt er rommelmarkten, brocantes, antiekbeurzen en garageverkopen uit elke provincie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Hoe vaak worden rommelmarkten bijgewerkt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "De lijst met rommelmarkten wordt regelmatig bijgewerkt zodat je altijd de meest recente evenementen ziet. Nieuwe markten worden zo snel mogelijk toegevoegd."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is er een Android-versie?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Momenteel is Bazaarzoeker beschikbaar voor iOS (iPhone). Een Android-versie voor Google Play is in ontwikkeling en komt binnenkort beschikbaar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Welke soorten evenementen staan op Bazaarzoeker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Je vindt rommelmarkten, straatrommelmarkten, brocantes, antiekbeurzen, vlooienmarkten en garageverkopen. Je kan filteren op type om precies te vinden wat je zoekt."
+                }
+            }
+        ]
     }
     </script>
 </head>
@@ -379,6 +534,74 @@
             </div>
         </div>
     </main>
+
+    <section class="content-section">
+        <h2>Rommelmarkten vinden in Vlaanderen</h2>
+        <p>
+            Bazaarzoeker verzamelt rommelmarkten, brocantes, antiekbeurzen en vlooienmarkten uit heel Vlaanderen
+            op &eacute;&eacute;n plek. Of je nu zoekt naar een gezellige straatrommelmarkt in Antwerpen, een brocante
+            in Oost-Vlaanderen of een garageverkoop in West-Vlaanderen &mdash; met Bazaarzoeker vind je het in
+            enkele seconden. De app is beschikbaar voor alle Vlaamse provincies: Antwerpen, Limburg,
+            Oost-Vlaanderen, West-Vlaanderen en Vlaams-Brabant.
+        </p>
+    </section>
+
+    <section class="content-section">
+        <h2>Hoe werkt het?</h2>
+        <div class="steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Download de app</h3>
+                <p>Beschikbaar in de App Store. Gratis en zonder account.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Zoek &amp; filter</h3>
+                <p>Filter op provincie, datum of type: rommelmarkt, brocante of antiekbeurs.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Bewaar &amp; plan</h3>
+                <p>Sla je favorieten op en voeg ze toe aan je agenda.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Veelgestelde vragen</h2>
+        <div class="faq-list">
+            <details>
+                <summary>Is Bazaarzoeker gratis?</summary>
+                <p class="faq-answer">
+                    Ja, Bazaarzoeker is volledig gratis te downloaden en te gebruiken. Je hebt geen account nodig om rommelmarkten te zoeken en te bekijken.
+                </p>
+            </details>
+            <details>
+                <summary>Welke provincies worden ondersteund?</summary>
+                <p class="faq-answer">
+                    Bazaarzoeker dekt heel Vlaanderen: Antwerpen, Limburg, Oost-Vlaanderen, West-Vlaanderen en Vlaams-Brabant. Je vindt er rommelmarkten, brocantes, antiekbeurzen en garageverkopen uit elke provincie.
+                </p>
+            </details>
+            <details>
+                <summary>Hoe vaak worden rommelmarkten bijgewerkt?</summary>
+                <p class="faq-answer">
+                    De lijst met rommelmarkten wordt regelmatig bijgewerkt zodat je altijd de meest recente evenementen ziet. Nieuwe markten worden zo snel mogelijk toegevoegd.
+                </p>
+            </details>
+            <details>
+                <summary>Is er een Android-versie?</summary>
+                <p class="faq-answer">
+                    Momenteel is Bazaarzoeker beschikbaar voor iOS (iPhone). Een Android-versie voor Google Play is in ontwikkeling en komt binnenkort beschikbaar.
+                </p>
+            </details>
+            <details>
+                <summary>Welke soorten evenementen staan op Bazaarzoeker?</summary>
+                <p class="faq-answer">
+                    Je vindt rommelmarkten, straatrommelmarkten, brocantes, antiekbeurzen, vlooienmarkten en garageverkopen. Je kan filteren op type om precies te vinden wat je zoekt.
+                </p>
+            </details>
+        </div>
+    </section>
 
     <footer id="support">
         <p>Hulp nodig of feedback?</p>
